@@ -40,6 +40,11 @@ class Program
     {
         private int knollenzahl;
 
+        public Kartoffel()
+        {
+            knollenzahl = 2;
+        }
+
         public void gefressenwerden()
         {
             knollenzahl--;
@@ -53,9 +58,11 @@ class Program
     public static void Main()
     {
         schwein Hugo = new schwein();
+        Kartoffel Rot = new Kartoffel();
         Hugo.init(10, 20, 30);
         Hugo.ausgabe();
         Hugo.wachsen();
         Hugo.ausgabe();
+        Hugo.fressen(Rot);
     }
 }
